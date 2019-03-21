@@ -9,8 +9,8 @@
 
 - El reto consiste en crear una web con dos rutas diferentes que corresponden a dos páginas diferentes
 
-- En una página debe aparecer un formulario con los siguientes campos:
-    - name: nombre de la empresa
+- En una página debe aparecer un formulario con los siguientes campos (todos son REQUERIDOS):
+    - name: nombre de la empresa (maximo 150 caracteres)
     - createdAt: fecha de creación de la empresa (en formato Date)
     - address: dirección física de la empresa
     - country: país de la empresa, debe ser un select y debe tener las siguientes opciones:
@@ -35,7 +35,7 @@
 
     ```
 
-    - phone: número de teléfono de la empresa   
+    - phone: número de teléfono de la empresa (ha de tener 9 caracteres, ni más ni menos, y hay que validarlo)
     - size: tamaño de la empresa, debe ser un select y tener las siguientes opciones:
 
     ```
