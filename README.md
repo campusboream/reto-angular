@@ -2,12 +2,17 @@
 
 # Características generales de la aplicación
 
-- Diseño fluido (full width)
+A partir del wireframe (prototipado de bajo nivel) incluido en `screens/` se ha de elaborar la siguiente página web con las siguientes caracterísiticas y cumpliendo los requisitos especificados más abajo:
+
+- Look & feel libre
+
+- RWD
 
 - Información del api:
-    - se debe clonar el siguiente mock-api https://www.mockapi.io/clone/5c939acd4dca5d0014ad8293, para ello habrá que logarse en la web de mock-api con el usuario de github, crear un projecto y utilizar la opción clonar
 
-- El reto consiste en crear una web con dos rutas diferentes que corresponden a dos páginas diferentes
+  - se debe clonar el siguiente mock-api https://www.mockapi.io/clone/5c939acd4dca5d0014ad8293, para ello habrá que logarse en la web de mock-api con el usuario de github, crear un projecto y utilizar la opción clonar
+
+- Creación de dos rutas diferentes que corresponden a dos páginas diferentes
 
 - En una página debe aparecer un formulario con los siguientes campos (todos son REQUERIDOS):
     - nombre: nombre de la empresa (maximo 150 caracteres)
@@ -83,7 +88,17 @@
 
 - Si el POST se realiza correctamente, debemos mostrar un mensaje de success del tipo "Registro realizado correctamente" debajo del formulario.
 
-- Si hay algún error al realizar el post (si el api devuelve un error), debe aparecer un  mensaje del tipo "Hubo un error durante el registro" debajo del formulario. Debe aparecer solo cuando haya algún error, es decir, si luego se cambia algo en el formulario y se vuelve a enviar y todo va correctamente, debe desaparecer y en su lugar aparecer el de success.
+- Si hay algún error al realizar el post (si el api devuelve un error), debe aparecer un mensaje del tipo "Hubo un error durante el registro" debajo del formulario. Debe aparecer solo cuando haya algún error, es decir, si luego se cambia algo en el formulario y se vuelve a enviar y todo va correctamente, debe desaparecer y en su lugar aparecer el de success.
+
+# Requisitos HTML:
+
+- HTML5.
+- El HTML ha de ser semántico.
+- Uso de la metodología BEM para crear los bloques (objetos).
+
+# Requisitos CSS:
+
+- Uso del preprocesador SCSS.
 
 # Requisitos javascript
 
