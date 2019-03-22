@@ -77,7 +77,7 @@ A partir del wireframe (prototipado de bajo nivel) incluido en `screens/` se ha 
 
 - El formulario debe limpiarse después de enviarse (es decir, deben volver a aparecer los inputs en blanco)
 
-- En la otra página debe aparecer un listado de las empresas registradas tal y como se indica en el diseño. Al principio no aparecerá ninguna al no haber registrado ninguna empresa, pero si se realiza correctamente el formulario, cuando registremos las empresas deben aparecer en esta página de listado. Para ello tendremos que hacer un GET al endpoint company del api.
+- En la otra página debe aparecer un listado de las empresas registradas tal y como se indica en el diseño. Al principio no aparecerá ninguna al no haber registrado ninguna empresa pero en lugar de mostrar la pantalla vacía mostraremos un mensaje que indique que aún no hemos registrado ningún negocio, de esta manera evitamos que el usuario piense que existe un error de programación y mejoramos su experiencia. Cuando se realice correctamente el formulario y registremos las empresas deben aparecer en esta página de listado. Para ello tendremos que hacer un GET al endpoint company del api.
 
 # PLUS
 
