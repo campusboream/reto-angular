@@ -10,10 +10,10 @@
 - El reto consiste en crear una web con dos rutas diferentes que corresponden a dos páginas diferentes
 
 - En una página debe aparecer un formulario con los siguientes campos (todos son REQUERIDOS):
-    - name: nombre de la empresa (maximo 150 caracteres)
-    - createdAt: fecha de creación de la empresa (en formato Date)
-    - address: dirección física de la empresa
-    - country: país de la empresa, debe ser un select y debe tener las siguientes opciones:
+    - nombre: nombre de la empresa (maximo 150 caracteres)
+    - fecha de creación: fecha de creación de la empresa (en formato Date). Ojo aquí, que el mockapi aunque le mandéis una fecha, lo convierte a timestamp y es lo que registra
+    - dirección: dirección física de la empresa
+    - país: país de la empresa, debe ser un select y debe tener las siguientes opciones:
 
     ```
     [{
@@ -35,8 +35,8 @@
 
     ```
 
-    - phone: número de teléfono de la empresa (ha de tener 9 caracteres, ni más ni menos, y hay que validarlo)
-    - size: tamaño de la empresa, debe ser un select y tener las siguientes opciones:
+    - teléfono: número de teléfono de la empresa (ha de tener un mínimo y un máximo 9 caracteres)
+    - tamaño de la empresa: tamaño de la empresa, debe ser un select y tener las siguientes opciones:
 
     ```
     [
@@ -55,6 +55,7 @@
     ]
 
     ```
+    - descripción: una descripción del negocio (máximo 250 caracteres)
 
 - La información del formulario debe enviarse mediante un POST al endpoint company del api. El objeto que se enviará en el POST debe tener los siguientes campos:
 
@@ -65,13 +66,18 @@
     address: string -> 'dirección: calle número etc',
     country: string -> 'el país de la empresa, aquí hay que pasar solo el código, que correspondería al value en el objeto del array',
     phone: string -> 'el número de teléfono',
-    size: string -> 'el tamaño de la empresa, si es grande, pequeña o mediana, igual que con el país, también hay que pasar únicamente el código del value'
+    size: string -> 'el tamaño de la empresa, si es grande, pequeña o mediana, igual que con el país, también hay que pasar únicamente el código del value',
+    description: string -> 'la descripción de la empresa'
 }
 ```
 
 - El formulario debe limpiarse después de enviarse (es decir, deben volver a aparecer los inputs en blanco)
 
-- En la otra página debe aparecer un listado de las empresas registradas tal y como se indica en el diseño. Al principio no aparecerá ninguna al no haber registrado ninguna empresa, pero si se realiza correctamente el formulario, cuando registremos las empresas deben aparecer en esta página de listado. Para ello tendremos que hacer un GET al endpoint company del api.
+- En la otra página debe aparecer un listado de las empresas registradas tal y como se indica en el diseño. Al principio no aparecerá ninguna al no haber registrado ninguna empresa, pero si se realiza correctamente el formulario, cuando registremos las empresas deben aparecer en esta página de listado. Para ello tendremos que hacer un GET al endpoint company del api:
+
+    - El get os devuelve un timestamp en el campo de la fecha, pero lo que hay que mostrar en el template es un formato dd/MM/yyyy
+
+    - El teléfono debe tener un guión cada 3 caracteres.
 
 # PLUS
 
