@@ -40,7 +40,7 @@ A partir del wireframe (prototipado de bajo nivel) incluido en `screens/` se ha 
 
     ```
 
-    - teléfono: número de teléfono de la empresa (ha de tener un mínimo y un máximo 9 caracteres)
+    - teléfono: número de teléfono de la empresa (ha de tener un mínimo y un máximo 9 caracteres y tienen que ser numéricos)
     - tamaño de la empresa: tamaño de la empresa, debe ser un select y tener las siguientes opciones:
 
     ```
@@ -78,6 +78,8 @@ A partir del wireframe (prototipado de bajo nivel) incluido en `screens/` se ha 
 
 - El formulario debe limpiarse después de enviarse (es decir, deben volver a aparecer los inputs en blanco)
 
+- El formulario debe limpiarse al pulsar el botón borrar.
+
 - En la otra página debe aparecer un listado de las empresas registradas tal y como se indica en el diseño. Al principio no aparecerá ninguna al no haber registrado ninguna empresa, pero si se realiza correctamente el formulario, cuando registremos las empresas deben aparecer en esta página de listado. Para ello tendremos que hacer un GET al endpoint company del api:
 
     - El get os devuelve un timestamp en el campo de la fecha, pero lo que hay que mostrar en el template es un formato dd/MM/yyyy
@@ -89,6 +91,8 @@ A partir del wireframe (prototipado de bajo nivel) incluido en `screens/` se ha 
 - Si el POST se realiza correctamente, debemos mostrar un mensaje de success del tipo "Registro realizado correctamente" debajo del formulario.
 
 - Si hay algún error al realizar el post (si el api devuelve un error), debe aparecer un mensaje del tipo "Hubo un error durante el registro" debajo del formulario. Debe aparecer solo cuando haya algún error, es decir, si luego se cambia algo en el formulario y se vuelve a enviar y todo va correctamente, debe desaparecer y en su lugar aparecer el de success.
+
+- Si se ha terminado todo y se quiere mejorar el ejercicio, marcar de alguna manera los campos incorrectos del formulario.
 
 # Requisitos HTML:
 
